@@ -22,3 +22,20 @@ The system is built on the **Google Gen AI SDK** and **LangGraph**, utilizing a 
 
 ## 5. Value Statement
 By automating the "Search-Audit-Calculate" loop, the Enterprise Travel Orchestrator reduces the active time required to book a compliant business trip from hours to minutes. It directly addresses the "budget uncertainty" pain point cited by 45% of travel managers by providing mathematically verified cost estimates and pre-enforcing policy compliance.
+
+## 🤖 Agentic Architecture
+The system utilizes a **Hierarchical Agent Workflow**:
+1.  **Planner Agent (Orchestrator):** Analyzes the user's request and breaks it down into research tasks.
+2.  **Researcher Agent:** "Searches" for attractions, flights, and hotels (simulated tool use).
+3.  **Writer Agent:** Compiles the gathered information into a formatted Markdown itinerary.
+
+## 🛠️ Tools Used
+* **DuckDuckGo Search (Simulated):** For finding real-time attraction data.
+* **Calculator:** For budget estimation.
+* **Gemini API:** For reasoning and content generation.
+
+## 🚀 How to Run
+1.  Clone this repository.
+2.  Install dependencies: `pip install -r requirements.txt`
+3.  Set your `GEMINI_API_KEY` in `config.py` (or use environment variables).
+4.  Run the planner: `python main.py`
